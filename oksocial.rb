@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://oss.sonatype.org/content/repositories/snapshots/com/baulsupp/oksocial/1.0.0-SNAPSHOT/oksocial-1.0.0-20160111.201853-1-bundle.tar.gz"
+  url "https://oss.sonatype.org/content/repositories/snapshots/com/baulsupp/oksocial/1.0.0-SNAPSHOT/oksocial-1.0.0-20160111.224140-2-bundle.tar.gz"
   version "1.0.0-SNAPSHOT"
-  sha256 "09b41c4baab837b26c301c49c9708c9e92e27281fb5e56a703f788f54a51d459"
+  sha256 "f550de1cd9cf6f95ab29ceadeeac60eb974ea0d842a8838fb08171cf02ab9aea"
 
   depends_on :java
 
