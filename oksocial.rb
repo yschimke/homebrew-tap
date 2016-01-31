@@ -13,6 +13,9 @@ class Oksocial < Formula
       s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
     end
     bin.install_symlink "#{libexec}/bin/oksocial"
+    bin.install_symlink "#{libexec}/bin/oksocial" => "fbgraph"
+    bin.install_symlink "#{libexec}/bin/oksocial" => "uberapi"
+    bin.install_symlink "#{libexec}/bin/oksocial" => "twitterapi"
   end
 
   test do
