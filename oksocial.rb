@@ -16,6 +16,7 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/oksocial" => "fbgraph"
     bin.install_symlink "#{libexec}/bin/oksocial" => "uberapi"
     bin.install_symlink "#{libexec}/bin/oksocial" => "twitterapi"
+    bin.install_symlink "#{libexec}/bin/oksocial" => "oksocial-command"
   end
 
   test do
