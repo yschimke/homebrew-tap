@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://oss.sonatype.org/content/repositories/snapshots/com/baulsupp/oksocial/1.0.3-SNAPSHOT/oksocial-1.0.3-20160505.083820-2-bundle.tar.gz"
-  version "1.0.3-SNAPSHOT"
-  sha256 "029b94e6bb36f83348ea00d558c4d1e084b7d8be6f17595b1aba1b104e61f0ff"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.3/oksocial-1.0.3-bundle.tar.gz"
+  version "1.0.3"
+  sha256 "8f7681e1530606814917d7a349b5d6fafa8192ff0976650bb784212c00cf80d6"
 
   depends_on :java
 
@@ -12,10 +12,17 @@ class Oksocial < Formula
     inreplace "#{libexec}/bin/oksocial" do |s|
       s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
     end
+    inreplace "#{libexec}/bin/okshell" do |s|
+      s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
+    end
+    bin.install_symlink "#{libexec}/bin/oksocial" => "okapi"
+    bin.install_symlink "#{libexec}/bin/fbapi"
+    bin.install_symlink "#{libexec}/bin/lyftapi"
+    bin.install_symlink "#{libexec}/bin/okshell"
     bin.install_symlink "#{libexec}/bin/oksocial"
-    bin.install_symlink "#{libexec}/bin/oksocial" => "uberapi"
-    bin.install_symlink "#{libexec}/bin/oksocial" => "twitterapi"
-    bin.install_symlink "#{libexec}/bin/oksocial" => "oksocial-command"
+    bin.install_symlink "#{libexec}/bin/tweetsearch"
+    bin.install_symlink "#{libexec}/bin/twitterapi"
+    bin.install_symlink "#{libexec}/bin/uberapi"
   end
 
   test do
