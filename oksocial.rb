@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.5/oksocial-1.0.5-bundle.tar.gz"
-  version "1.0.5"
-  sha256 "77480f631523c83095151d292780ff0513695cd6411f475ca8119bd884c3e85d"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.7/oksocial-1.0.7-bundle.tar.gz"
+  version "1.0.7"
+  sha256 "46a9bfe4f60e9d5620fc4af93adeec7df54fb85efd8b908b7f8f19af87f0ce00"
 
   depends_on :java
 
@@ -20,6 +20,8 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/lyftapi"
     bin.install_symlink "#{libexec}/bin/okshell"
     bin.install_symlink "#{libexec}/bin/oksocial"
+    bin.install_symlink "#{libexec}/bin/squareapi"
+    bin.install_symlink "#{libexec}/bin/stackexchangeapi"
     bin.install_symlink "#{libexec}/bin/tweetsearch"
     bin.install_symlink "#{libexec}/bin/twitterapi"
     bin.install_symlink "#{libexec}/bin/uberapi"
