@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.8/oksocial-1.0.8-bundle.tar.gz"
-  version "1.0.8"
-  sha256 "33a46f3a98dc333f15210fbf74f1b3687aa7f008140277e6dbc79907928a03b4"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.9/oksocial-1.0.9-bundle.tar.gz"
+  version "1.0.9"
+  sha256 "8962e4bd58539863426dbb1274b8e7ee860b33764c2bb624e9a42d8de1a3a7de"
 
   depends_on :java
 
@@ -16,7 +16,10 @@ class Oksocial < Formula
       s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
     end
     bin.install_symlink "#{libexec}/bin/oksocial" => "okapi"
+    bin.install_symlink "#{libexec}/bin/4sqapi"
+    bin.install_symlink "#{libexec}/bin/4sqsearch"
     bin.install_symlink "#{libexec}/bin/fbapi"
+    bin.install_symlink "#{libexec}/bin/githubapi"
     bin.install_symlink "#{libexec}/bin/lyftapi"
     bin.install_symlink "#{libexec}/bin/okshell"
     bin.install_symlink "#{libexec}/bin/oksocial"
