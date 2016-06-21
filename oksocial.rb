@@ -2,19 +2,16 @@ class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
   url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.12/oksocial-1.0.12-bundle.tar.gz"
-  version "1.0.12"
   sha256 "94c37a8cda83caf6d054724ad965bd440da13f5569332a188c4d64203d82eabe"
 
   depends_on :java
+  depends_on "jq" => :recommended
+  depends_on "corelocationcli" => :recommended
 
   def install
     libexec.install Dir["*"]
-    inreplace "#{libexec}/bin/oksocial" do |s|
-      s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
-    end
-    inreplace "#{libexec}/bin/okshell" do |s|
-      s.gsub! /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
-    end
+    inreplace "#{libexec}/bin/oksocial", /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
+    inreplace "#{libexec}/bin/okshell", /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
     bin.install_symlink "#{libexec}/bin/oksocial" => "okapi"
     bin.install_symlink "#{libexec}/bin/4sqapi"
     bin.install_symlink "#{libexec}/bin/4sqsearch"
