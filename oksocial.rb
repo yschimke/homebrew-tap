@@ -1,8 +1,8 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.21/oksocial-1.0.21-bundle.tar.gz"
-  sha256 "f99dd04f846adf9fb17b29618c67bd31c73c5e3fc6547f837c88b62a33238f6b"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.22/oksocial-1.0.22-bundle.tar.gz"
+  sha256 "2cfb529b95e69ee452c8d74bf1e33970d1f2223f5ea2f1c709f04bcf34863199"
 
   devel do
     file = Dir.glob(ENV['HOME'] + '/workspace/oksocial/target/oksocial-*-bundle.tar.gz').first
