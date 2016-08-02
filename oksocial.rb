@@ -4,11 +4,11 @@ class Oksocial < Formula
   url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.27/oksocial-1.0.27-bundle.tar.gz"
   sha256 "25c0e1856dad5e78b17e6b67154b12515af081b9ed35a180e60506cf6f239a27"
 
-  devel do
-    file = Dir.glob(ENV['HOME'] + '/workspace/oksocial/target/oksocial-*-bundle.tar.gz').first
-    url "file://#{file}"
-    sha256 Digest::SHA256.file(file).to_s
-  end
+#  devel do
+#    file = Dir.glob(ENV['HOME'] + '/workspace/oksocial/target/oksocial-*-bundle.tar.gz').first
+#    url "file://#{file}"
+#    sha256 Digest::SHA256.file(file).to_s
+#  end
 
   depends_on :java
   depends_on "jq" => :recommended
