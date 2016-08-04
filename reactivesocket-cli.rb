@@ -1,9 +1,9 @@
 class ReactivesocketCli < Formula
   desc "ReactiveSocket CLI"
   homepage "https://github.com/yschimke/reactivesocket-cli"
-  url "https://github.com/ReactiveSocket/reactivesocket-cli/releases/download/0.0.2-SNAPSHOT/reactivesocket-cli-0.0.2-SNAPSHOT.tar"
-  version "0.0.2-SNAPSHOT"
-  sha256 "d6137b50d66bb149e78c5e50cd0191213820cad1bae4a5dd5d3df8bfe8fa187c"
+  url "https://github.com/ReactiveSocket/reactivesocket-cli/releases/download/0.0.2/reactivesocket-cli-0.0.2.tar"
+  version "0.0.2"
+  sha256 "a73ce35a2b865cb72a15ffb3019ab62c5ed71c7a29df71312282951a4f48a16f"
 
   depends_on :java
 
