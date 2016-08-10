@@ -16,8 +16,8 @@ class Oksocial < Formula
 
   def install
     libexec.install Dir["*"]
-    inreplace "#{libexec}/bin/oksocial", /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
-    inreplace "#{libexec}/bin/okshell", /^INSTALLDIR.*/, "INSTALLDIR=#{libexec}"
+    inreplace "#{libexec}/bin/oksocial", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
+    inreplace "#{libexec}/bin/okshell", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
     bin.install_symlink "#{libexec}/bin/oksocial" => "okapi"
     bin.install_symlink "#{libexec}/bin/4sqapi"
     bin.install_symlink "#{libexec}/bin/4sqsearch"
