@@ -1,8 +1,8 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.27/oksocial-1.0.27-bundle.tar.gz"
-  sha256 "25c0e1856dad5e78b17e6b67154b12515af081b9ed35a180e60506cf6f239a27"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.28/oksocial-1.0.28-bundle.tar.gz"
+  sha256 "e0fb275bbf128ab6cff4667adfbad4b48c55c25c7e4c112cb2c36d3c0aef874b"
 
 #  devel do
 #    file = Dir.glob(ENV['HOME'] + '/workspace/oksocial/target/oksocial-*-bundle.tar.gz').first
@@ -27,6 +27,7 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/lyftapi"
     bin.install_symlink "#{libexec}/bin/okshell"
     bin.install_symlink "#{libexec}/bin/oksocial"
+    bin.install_symlink "#{libexec}/bin/msftapi"
     bin.install_symlink "#{libexec}/bin/slackapi"
     bin.install_symlink "#{libexec}/bin/slackrtm"
     bin.install_symlink "#{libexec}/bin/sorecent"
