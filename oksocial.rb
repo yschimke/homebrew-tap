@@ -35,9 +35,9 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/uberapi"
 
     bash_completion.install "#{libexec}/bash/completion.bash" => "oksocial"
-    
+
     unless (var/"oksocial/plugins").exist?
-    	(var/"oksocial/plugins").mkdir
+      (var/"oksocial/plugins").mkpath
     end
   end
 
