@@ -1,8 +1,8 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.32/oksocial-1.0.32-bundle.tar.gz"
-  sha256 "3ce5a6941661a6c5eb4f45181716c56a9e4ea952821aa6900d9181577d8c07e1"
+  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.33/oksocial-1.0.33-bundle.tar.gz"
+  sha256 "fa830290bb4012dfe52ccf3679d8a6081d6029773b8c9b39a1232f3280358eff"
 
   depends_on :java
   depends_on "jq" => :recommended
@@ -29,7 +29,6 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/sorecent"
     bin.install_symlink "#{libexec}/bin/squareapi"
     bin.install_symlink "#{libexec}/bin/stackexchangeapi"
-    bin.install_symlink "#{libexec}/bin/tweetsearch"
     bin.install_symlink "#{libexec}/bin/twilioapi"
     bin.install_symlink "#{libexec}/bin/twitterapi"
     bin.install_symlink "#{libexec}/bin/uberapi"
