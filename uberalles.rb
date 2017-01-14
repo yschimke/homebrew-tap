@@ -1,8 +1,8 @@
 class Uberalles < Formula
   desc "Uberalles"
   homepage "https://github.com/yschimke/uberalles"
-  url "https://github.com/yschimke/uberalles/archive/0.2.tar.gz"
-  sha256 "dfa9e5404af775d4d63b9dfc5a06a3def506c3bfc124dea245f96175e1f10bbb"
+  url "https://github.com/yschimke/uberalles/archive/0.3.tar.gz"
+  sha256 "9cbcd861770822bc361b5fc6590d0352c77e4ab1b5adac95b4c587d6292b964d"
 
   depends_on "oksocial"
 
