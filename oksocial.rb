@@ -5,6 +5,7 @@ class Oksocial < Formula
   sha256 "0ad3c21cce9561ab8e987ee398711bd353de718595c2e842d44ddb9424530e38"
 
   depends_on :java
+  depends_on "bash-completion" => :recommended
   depends_on "jq" => :recommended
 
   def install
