@@ -6,7 +6,6 @@ class Oksocial < Formula
 
   depends_on :java
   depends_on "jq" => :recommended
-  depends_on "corelocationcli" => :recommended
 
   def install
     libexec.install Dir["*"]
