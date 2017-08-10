@@ -28,6 +28,7 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/msftapi"
     bin.install_symlink "#{libexec}/bin/slackapi"
     bin.install_symlink "#{libexec}/bin/sorecent"
+    bin.install_symlink "#{libexec}/bin/spotifyapi"
     bin.install_symlink "#{libexec}/bin/squareapi"
     bin.install_symlink "#{libexec}/bin/stackexchangeapi"
     bin.install_symlink "#{libexec}/bin/transferwiseapi"
