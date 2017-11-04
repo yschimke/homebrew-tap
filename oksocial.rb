@@ -1,10 +1,11 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  url "https://github.com/yschimke/oksocial/releases/download/oksocial-1.0.54/oksocial-1.0.54-bundle.tar.gz"
-  sha256 "0a0f7ad5ed75b8b6ff20cd18b5e6c83c970aefbfe22cf2e0e55e67ce2573c3be"
+  version "1.6.0"
+  url "https://github.com/yschimke/oksocial/releases/download/#{version}/oksocial-#{version}.tgz"
+  sha256 "dfda3662bbe2b10e4d8692cf363bda05b4038d229a2eb1a7aff748520bf36cc0"
 
-  depends_on :java
+  depends_on :java => :optional
   depends_on "bash-completion" => :recommended
   depends_on "jq" => :recommended
 
@@ -28,6 +29,7 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/msftapi"
     bin.install_symlink "#{libexec}/bin/slackapi"
     bin.install_symlink "#{libexec}/bin/sorecent"
+    bin.install_symlink "#{libexec}/bin/spotifyapi"
     bin.install_symlink "#{libexec}/bin/squareapi"
     bin.install_symlink "#{libexec}/bin/stackexchangeapi"
     bin.install_symlink "#{libexec}/bin/transferwiseapi"
