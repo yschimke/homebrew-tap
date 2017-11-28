@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  version "1.10.0"
+  version "1.11.0"
   url "https://github.com/yschimke/oksocial/releases/download/#{version}/oksocial-#{version}.tgz"
-  sha256 "bd1392f8b599408a13f80b5905c15871d44e02de5c66107ac1129c4bda092845"
+  sha256 "450ff0c86e6697619760c93448320f349fa55d9c79c1dcb6a334cf3b0be50feb"
 
   depends_on :java => :optional
   depends_on "bash-completion" => :recommended
@@ -19,23 +19,12 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/oksocial" => "okws"
     bin.install_symlink "#{libexec}/bin/4sqapi"
     bin.install_symlink "#{libexec}/bin/fbapi"
-    bin.install_symlink "#{libexec}/bin/giphyapi"
     bin.install_symlink "#{libexec}/bin/githubapi"
-    bin.install_symlink "#{libexec}/bin/igapi"
-    bin.install_symlink "#{libexec}/bin/imgurapi"
-    bin.install_symlink "#{libexec}/bin/lyftapi"
+    bin.install_symlink "#{libexec}/bin/mapboxapi"
     bin.install_symlink "#{libexec}/bin/okscript"
     bin.install_symlink "#{libexec}/bin/oksocial"
-    bin.install_symlink "#{libexec}/bin/msftapi"
-    bin.install_symlink "#{libexec}/bin/slackapi"
     bin.install_symlink "#{libexec}/bin/sorecent"
-    bin.install_symlink "#{libexec}/bin/spotifyapi"
-    bin.install_symlink "#{libexec}/bin/squareapi"
-    bin.install_symlink "#{libexec}/bin/stackexchangeapi"
-    bin.install_symlink "#{libexec}/bin/transferwiseapi"
-    bin.install_symlink "#{libexec}/bin/twilioapi"
     bin.install_symlink "#{libexec}/bin/twitterapi"
-    bin.install_symlink "#{libexec}/bin/uberapi"
 
     bash_completion.install "#{libexec}/bash/completion.bash" => "oksocial"
 
