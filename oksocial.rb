@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  version "1.17.0"
+  version "1.18.0"
   url "https://github.com/yschimke/oksocial/releases/download/#{version}/oksocial-#{version}.tgz"
-  sha256 "c70e0c2d44dc2dd30743ea73c5bcad2cdfa4b0b9682af65c6fa375b763cfacba"
+  sha256 "b2b0d11526822657e6317dd96123d390d8b65f8afdc95f50a07b5e70d9ead274"
 
   depends_on :java => :optional
   depends_on "bash-completion" => :recommended
