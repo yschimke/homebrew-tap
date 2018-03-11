@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  version "1.34.0"
+  version "1.36.0"
   url "https://github.com/yschimke/oksocial/releases/download/#{version}/oksocial-#{version}.tgz"
-  sha256 "bccef5e4b96dd3d0f408a642ce10ec0bd58b6062d028bd40246281a3d2e88d7c"
+  sha256 "404825226d8b5373a44e9141a39753a2602a5d0c45e7f51112544ad83da3d98e"
 
   depends_on :java => :optional
   depends_on "bash-completion" => :recommended
@@ -23,9 +23,10 @@ class Oksocial < Formula
     bin.install_symlink "#{libexec}/bin/mapboxapi"
     bin.install_symlink "#{libexec}/bin/okscript"
     bin.install_symlink "#{libexec}/bin/oksocial"
-    bin.install_symlink "#{libexec}/bin/sorecent"
+    bin.install_symlink "#{libexec}/bin/sorecent.kts" => "sorecent"
     bin.install_symlink "#{libexec}/bin/twitterapi"
-    bin.install_symlink "#{libexec}/bin/tweetsearch"
+    bin.install_symlink "#{libexec}/bin/tweetsearch.kts" => "tweetsearch"
+    bin.install_symlink "#{libexec}/bin/uberprices.kts" => "uberprices"
 
     bash_completion.install "#{libexec}/bash/completion.bash" => "oksocial"
 
