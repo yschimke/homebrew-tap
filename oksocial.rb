@@ -1,9 +1,9 @@
 class Oksocial < Formula
   desc "OkSocial"
   homepage "https://github.com/yschimke/oksocial"
-  version "1.42.0"
+  version "1.44.0"
   url "https://github.com/yschimke/oksocial/releases/download/#{version}/oksocial-#{version}.tgz"
-  sha256 "dfd77f1dae93f73e31637c17fa5292ada5999cd87a22ae6ec65999dc794f8393"
+  sha256 "e4359042e623b961e2ccae8a23b719a20cfef32bf815a4691c0820e904efe3c8"
 
   depends_on :java => :optional
   depends_on "bash-completion" => :recommended
@@ -13,8 +13,6 @@ class Oksocial < Formula
     libexec.install Dir["*"]
     inreplace "#{libexec}/bin/okscript", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
     inreplace "#{libexec}/bin/oksocial", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
-    inreplace "#{libexec}/bin/okscript", /^PLUGINDIR.*/, "PLUGINDIR=" + var/"oksocial/plugins"
-    inreplace "#{libexec}/bin/oksocial", /^PLUGINDIR.*/, "PLUGINDIR=" + var/"oksocial/plugins"
     bin.install_symlink "#{libexec}/bin/oksocial" => "okapi"
     bin.install_symlink "#{libexec}/bin/oksocial" => "okws"
     bin.install_symlink "#{libexec}/bin/4sqapi"
