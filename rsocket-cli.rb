@@ -9,7 +9,6 @@ class RsocketCli < Formula
 
   def install
     libexec.install Dir["*"]
-    inreplace "#{libexec}/bin/rsocket-cli", /^DEFAULT_JVM_OPTS=.*/, "DEFAULT_JVM_OPTS=-Xbootclasspath/p:#{libexec}/lib/alpn-boot-8.1.11.v20170118.jar"
     bin.install_symlink "#{libexec}/bin/rsocket-cli"
     bash_completion.install "#{libexec}/bash/completion.bash" => "rsocket-cli"
   end
