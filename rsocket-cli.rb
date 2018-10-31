@@ -1,9 +1,9 @@
 class RsocketCli < Formula
   desc "RSocket CLI"
   homepage "https://github.com/yschimke/reactivesocket-cli"
-  version "1.10.0"
+  version "1.14.0"
   url "https://github.com/rsocket/rsocket-cli/releases/download/#{version}/rsocket-cli-#{version}.tgz"
-  sha256 "9e4bce7ca0ff95f569a650b4cc2a2527ed07d74ed8b6c672a0a2be1397a6c009"
+  sha256 "97c304c18a89fcbe59e2d0f8d6767f777ec811529713ca8796c93c41b6cb566d"
 
   depends_on :java
 
