@@ -1,9 +1,9 @@
 class RsocketCli < Formula
   desc "RSocket CLI"
   homepage "https://github.com/yschimke/reactivesocket-cli"
-  version "1.22"
+  version "1.23"
   url "https://jitpack.io/com/github/rsocket/rsocket-cli/#{version}/rsocket-cli-#{version}.tar"
-  sha256 "422ebe71f1f26e4f6c9ed4079cc15cd899fb6165fa8ca19a59f8bfb16b0147e8"
+  sha256 "18747149ea61e3a7a957311401186d445d08b05eb12702e82fd399e9829f0f26"
 
   depends_on :java
 
@@ -12,12 +12,6 @@ class RsocketCli < Formula
     bin.install_symlink "#{libexec}/bin/rsocket-cli"
     mkdir prefix/"bash"
 
-    system "#{bin}/rsocket-cli --completionScript > #{prefix}/bash/completion.bash"
-    bash_completion.install "#{prefix}/bash/completion.bash" => "rsocket-cli"
-
-    system "echo '#compdef rsocket-cli' > #{prefix}/bash/completion.zsh"
-    system "echo 'autoload -U +X bashcompinit && bashcompinit' >> #{prefix}/bash/completion.zsh"
-    system "#{bin}/rsocket-cli --completionScript >> #{prefix}/bash/completion.zsh"
-    zsh_completion.install "#{prefix}/bash/completion.zsh" => "_rsocket-cli"
+    zsh_completion.install "#{libexec}/zsh/_rsocket-cli" => "_rsocket-cli"
   end
 end
