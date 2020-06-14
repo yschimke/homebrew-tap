@@ -1,9 +1,9 @@
 class Okurl < Formula
   desc "OkUrl"
   homepage "https://github.com/yschimke/okurl"
-  version "2.4"
+  version "2.5"
   url "https://jitpack.io/com/github/yschimke/okurl/#{version}/okurl-#{version}.tar"
-  sha256 "d524214d451fcf7198050c7a543026c9d4984f39e28cee99a998a361d4c1b378"
+  sha256 "5635876a01fff37da6882e78118cdc14978cff8073d551d0efbf941e96b00d62"
 
   depends_on :java => :optional
   depends_on "bash-completion" => :recommended
