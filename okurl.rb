@@ -1,37 +1,15 @@
 class Okurl < Formula
   desc "OkUrl"
   homepage "https://github.com/yschimke/okurl"
-  version "2.5"
-  url "https://jitpack.io/com/github/yschimke/okurl/#{version}/okurl-#{version}.tar"
-  sha256 "5635876a01fff37da6882e78118cdc14978cff8073d551d0efbf941e96b00d62"
+  version "2.11"
+  url "https://github.com/yschimke/okurl/releases/download/#{version}/okurl.tar"
+  sha256 "a6560183c213f9020d6aaf5629b33b0de19b3cc05b44cc8f2f223ca6b2eba7a4"
 
-  depends_on :java => :optional
-  depends_on "bash-completion" => :recommended
   depends_on "jq" => :recommended
 
   def install
     libexec.install Dir["*"]
-    inreplace "#{libexec}/bin/okscript", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
-    inreplace "#{libexec}/bin/okurl", /^export INSTALLDIR.*/, "export INSTALLDIR=#{libexec}"
-    bin.install_symlink "#{libexec}/bin/okurl" => "okapi"
-    bin.install_symlink "#{libexec}/bin/okurl" => "okws"
-    bin.install_symlink "#{libexec}/bin/4sqapi"
-    bin.install_symlink "#{libexec}/bin/cronhub-ping"
-    bin.install_symlink "#{libexec}/bin/fbapi"
-    bin.install_symlink "#{libexec}/bin/githubapi"
-    bin.install_symlink "#{libexec}/bin/mapboxapi"
-    bin.install_symlink "#{libexec}/bin/okscript"
-    bin.install_symlink "#{libexec}/bin/okurl"
-    bin.install_symlink "#{libexec}/bin/sorecent.kts" => "sorecent"
-    bin.install_symlink "#{libexec}/bin/twitterapi"
-    bin.install_symlink "#{libexec}/bin/tweetsearch.kts" => "tweetsearch"
-    bin.install_symlink "#{libexec}/bin/uberprices.kts" => "uberprices"
-
-    bash_completion.install "#{libexec}/bash/completion.bash" => "okurl"
-    zsh_completion.install "#{libexec}/zsh/_okurl" => "_okurl"
-  end
-
-  test do
-    system "#{bin}/okurl" "https://api.twitter.com/robots.txt"
+    bin.install_symlink "#{libexec}/build/graal/okurl"
+    zsh_completion.install "#{libexec}/zsh/_okurl"
   end
 end
