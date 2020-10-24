@@ -1,9 +1,14 @@
 class Cooee < Formula
   desc "Cooee"
   homepage "https://github.com/yschimke/cooee-cli"
-  version "0.1"
+  version "0.2"
   url "https://github.com/yschimke/cooee-cli/releases/download/#{version}/cooee-cli-graal-#{version}.tar"
-  sha256 "24c30e87318e9b48ad0decb727d6a233ada745e0ab52743220f2c788952b94f1"
+  sha256 ""
+
+  on_linux do
+    url "https://github.com/yschimke/cooee-cli/releases/download/#{version}/cooee-cli-graal-linux-#{version}.tar"
+    sha256 "9688a34de261588a6ed6b8f99230a6268e2b9f3c17c0a741f4bf79968e005769"
+  end
 
   depends_on "jq" => :recommended
 
