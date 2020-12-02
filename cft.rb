@@ -8,8 +8,6 @@ class Cft < Formula
   version "0.2.1"
   url "https://github.com/yschimke/certifikit/releases/download/0.2.1.ys/cft-linux.tar"
 
-  depends_on :java
-
   def install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/build/graal/cft"
