@@ -5,8 +5,6 @@ class RsocketCli < Formula
   url "https://jitpack.io/com/github/rsocket/rsocket-cli/#{version}/rsocket-cli-#{version}.tar"
   sha256 "d0d6249a59a32b77e3076e9d47d2ec962e4448ea12f92694583a440e1322a532"
 
-  depends_on :java
-
   def install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/rsocket-cli"
