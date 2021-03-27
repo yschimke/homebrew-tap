@@ -1,9 +1,9 @@
 class RsocketCli < Formula
   desc "RSocket CLI"
   homepage "https://github.com/yschimke/reactivesocket-cli"
-  version "1.29"
+  version "1.30"
   url "https://github.com/rsocket/rsocket-cli/releases/download/#{version}/rsocket-cli-graal-#{version}.tar"
-  sha256 "6304dc5048ec684537cd711a169b639f2f9f01d6fb173a053fad1ec98b018d80"
+  sha256 "d9de489ad4cf3bbb2ec7b5a03638454851d68577f78306e456b53ca081e20f87"
 
   def install
     libexec.install Dir["*"]
