@@ -1,9 +1,9 @@
 class Okurl < Formula
   desc "OkUrl"
   homepage "https://github.com/yschimke/okurl"
-  version "3.5"
+  version "3.6"
   url "https://github.com/yschimke/okurl/releases/download/#{version}/okurl-graal-#{version}.tar"
-  sha256 "9144e16e46f97b0055e0b1e8d432046762c336fb9cf5e033f199c41139d15fe1"
+  sha256 "e9bc5d743c18ab6655f46958154bafe9aa8e4a3ae81b5fd8f19d2fc514488916"
 
   depends_on "jq" => :recommended
 
