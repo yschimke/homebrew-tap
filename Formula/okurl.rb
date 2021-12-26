@@ -2,9 +2,9 @@
 class Okurl < Formula
   desc "OkHttp Kotlin command line"
   homepage "https://github.com/yschimke/okurl"
-  url "https://github.com/yschimke/okurl/releases/download/v3.14.0/okurl-graal-3.14.0.zip"
-  version "3.14.0"
-  sha256 "6b508f8f9bafeb796884e8d032822f497a1fbcadd89c15d0e81a6855ed143f28"
+  url "https://github.com/yschimke/okurl/releases/download/v3.17.0/okurl-graal-3.17.0.zip"
+  version "3.17.0"
+  sha256 "d690714f1d3d6339ac81c7cb2d8d267bf8bf7c03ac2a81b3141d5f89c11525c0"
   license "Apache-2.0"
 
   depends_on "jq"
@@ -18,6 +18,6 @@ class Okurl < Formula
 
   test do
     output = shell_output("#{bin}/okurl --version")
-    assert_match "3.14.0", output
+    assert_match "3.17.0", output
   end
 end
