@@ -1,3 +1,4 @@
+# 
 class Okurl < Formula
   desc "OkHttp Kotlin command line"
   homepage "https://github.com/yschimke/okurl"
@@ -9,6 +10,8 @@ class Okurl < Formula
   depends_on "jq"
 
   def install
+    zsh_completion.install "#{libexec}/zsh/_okurl" => "_neo4j-migrations"
+
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/okurl"
   end
