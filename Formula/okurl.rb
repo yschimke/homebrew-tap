@@ -10,10 +10,10 @@ class Okurl < Formula
   depends_on "jq"
 
   def install
-    zsh_completion.install "#{libexec}/zsh/_okurl" => "_neo4j-migrations"
-
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/okurl"
+
+    zsh_completion.install "#{libexec}/zsh/_okurl" => "_okurl"
   end
 
   test do
