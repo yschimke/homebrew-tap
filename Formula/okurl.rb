@@ -4,7 +4,7 @@ class Okurl < Formula
   homepage "https://github.com/yschimke/okurl"
   url "https://github.com/yschimke/okurl/releases/download/v3.14.0/okurl-graal-3.14.0.zip"
   version "3.14.0"
-  sha256 "b7e268fe0dbbff99c3f42b76f7468238dea3d165006cc1ee55f96f9d5d65057d"
+  sha256 "6b508f8f9bafeb796884e8d032822f497a1fbcadd89c15d0e81a6855ed143f28"
   license "Apache-2.0"
 
   depends_on "jq"
